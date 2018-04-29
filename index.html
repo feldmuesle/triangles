@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Layout</title>
+		<meta name="viewport" content="width=device-width"/>
+	</head>
+	<link rel="stylesheet" href="styles/styles.css"/>
+	<link rel="stylesheet" href="http://d5wfroyti11sa.cloudfront.net/prod/client/ts-10.0.22.min.css" integrity="" crossorigin="anonymous"/>
+	<script src="http://d5wfroyti11sa.cloudfront.net/prod/client/ts-10.0.22.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+	<body>
+		<header data-ts="TopBar"></header>
+		<main data-ts="Main">
+			<div data-ts="MainContent">
+				<div class="container">
+					<h1>What kind of triangle is it?</h1>
+					<form data-ts="Form" class="js-ui-form ts-form">
+						<fieldset>
+							<label>
+								<span>Side A</span>
+								<input type="number" placeholder="Enter length for side A of triangle" />
+							</label>
+						</fieldset>
+						<fieldset>
+							<label>
+								<span>Side B</span>
+								<input type="number" placeholder="Enter length for side B of triangle"/>
+							</label>
+						</fieldset>
+						<fieldset>
+							<label>
+								<span>Side C</span>
+								<input type="number" placeholder="Enter length for side C of triangle"/>
+							</label>
+						</fieldset>
+						<div class="btn-row">
+							<button data-ts="Button" class="ts-primary submit" onclick="ts.triangleDetector.sendForm()">
+								<span>Calculate triangle</span>
+							</button>
+						</div>						
+					</form>
+				</div>
+			</div>
+		</main>
+	</body>
+	<script src="js/triangle-detector.js"></script>
+	<script type="text/javascript">
+
+		ts.ui.ready(function() {
+			ts.triangleDetector = triangleDetector();
+
+		});
+	</script>
+</html>

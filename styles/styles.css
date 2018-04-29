@@ -1,0 +1,10 @@
+.container {
+	margin: 1.5rem auto;
+	max-width: 500px;
+	text-align: center;
+}
+
+.btn-row {
+	margin-top: 1.5rem;
+	text-align: center;
+}
